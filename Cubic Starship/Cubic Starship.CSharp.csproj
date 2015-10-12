@@ -74,11 +74,15 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\BulletTesting.cs" />
-    <Compile Include="Assets\Scripts\RotateCameraScript.cs" />
-    <Compile Include="Assets\Scripts\ShipControls.cs" />
-    <Compile Include="Assets\Scripts\TestingCameraSpaces.cs" />
-    <Compile Include="Assets\Scripts\TestingNormalizingEquation.cs" />
+    <Compile Include="Assets\Scripts\BulletScripts\EnemyProjectiles.cs" />
+    <Compile Include="Assets\Scripts\BulletScripts\PlayerBullet.cs" />
+    <Compile Include="Assets\Scripts\EnemyScripts\EnemyFireScript.cs" />
+    <Compile Include="Assets\Scripts\GlobalScripts\KillableObject.cs" />
+    <Compile Include="Assets\Scripts\GlobalScripts\RotateCameraScript.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\BulletTesting.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\PlayerControls.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\ShipControls.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\TestingCameraSpaces.cs" />
     <Compile Include="Assets\U-Wing\Scripts\Demo\SpaceSkyboxes\DemoSceneScript.cs" />
     <Compile Include="Assets\U-Wing\Scripts\Demo\SpaceSkyboxes\DemoScriptSceneLoader.cs" />
     <Compile Include="Assets\U-Wing\Scripts\Demo\SpaceSkyboxes\MouseLook.cs" />
