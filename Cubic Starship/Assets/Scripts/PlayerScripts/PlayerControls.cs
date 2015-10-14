@@ -4,6 +4,7 @@ using System.Collections;
 public class PlayerControls : KillableObject
 {
     public float shipMovementSpeed = 0.1f;
+    //public WeaponScript[] weapons;
 
     private Vector3 viewportPos;
     private Animator anim;
@@ -49,7 +50,7 @@ public class PlayerControls : KillableObject
     {
         Vector3 cameraRightVector = mainCamera.transform.right;
         killableObject.transform.position += cameraRightVector * (Input.GetAxis("ShipHorizontalMovement") * shipMovementSpeed);
-        //killableObject.transform.rotation = Quaternion.Euler(0, 0, -45f * Input.GetAxis("ShipHorizontalMovement"));
+        killableObject.transform.rotation = Quaternion.Euler(0, 0, -45f * Input.GetAxis("ShipHorizontalMovement") * Time.deltaTime);
     }
     /// <summary>
     /// Used to keep the player in the camera screen bounds

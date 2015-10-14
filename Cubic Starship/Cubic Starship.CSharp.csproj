@@ -83,6 +83,8 @@
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerControls.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\ShipControls.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\TestingCameraSpaces.cs" />
+    <Compile Include="Assets\Scripts\WeaponsScripts\ShipComponent.cs" />
+    <Compile Include="Assets\Scripts\WeaponsScripts\WeaponScript.cs" />
     <Compile Include="Assets\U-Wing\Scripts\Demo\SpaceSkyboxes\DemoSceneScript.cs" />
     <Compile Include="Assets\U-Wing\Scripts\Demo\SpaceSkyboxes\DemoScriptSceneLoader.cs" />
     <Compile Include="Assets\U-Wing\Scripts\Demo\SpaceSkyboxes\MouseLook.cs" />
