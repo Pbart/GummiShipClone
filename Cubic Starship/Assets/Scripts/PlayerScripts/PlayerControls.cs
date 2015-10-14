@@ -7,14 +7,14 @@ public class PlayerControls : KillableObject
     //public WeaponScript[] weapons;
 
     private Vector3 viewportPos;
-    private Animator anim;
+    //private Animator anim;
 
     // Use this for initialization
     void Start()
     {
         killableObject = this.gameObject;
         mainCamera = Camera.main;
-        anim = gameObject.GetComponent<Animator>();
+        //anim = gameObject.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -23,7 +23,7 @@ public class PlayerControls : KillableObject
         GetAxisInput();
         KeepPlayerInBounds();
         FireWeapons();
-        DoDefensiveAction();
+        //DoDefensiveAction();
     }
     /// <summary>
     /// Used to grab input values from the input manager
@@ -79,17 +79,17 @@ public class PlayerControls : KillableObject
         }
     }
 
-    private void DoDefensiveAction()
-    {
-        if (Input.GetAxisRaw("DefensiveAction") != 0)
-        {
-            //Debug.Log(Input.GetAxisRaw("DefensiveAction"));
-            anim.SetBool("IsDefensiveButtonPressed", true);
-        }
-        else
-        {
-            anim.SetBool("IsDefensiveButtonPressed", false);
-        }
-    }
+    //private void DoDefensiveAction()
+    //{
+    //    if (Input.GetAxisRaw("DefensiveAction") != 0)
+    //    {
+    //        //Debug.Log(Input.GetAxisRaw("DefensiveAction"));
+    //        anim.SetBool("IsDefensiveButtonPressed", true);
+    //    }
+    //    else
+    //    {
+    //        anim.SetBool("IsDefensiveButtonPressed", false);
+    //    }
+    //}
 
 }

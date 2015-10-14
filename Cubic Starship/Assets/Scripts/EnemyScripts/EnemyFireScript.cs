@@ -18,7 +18,7 @@ public class EnemyFireScript : KillableObject
     
     void FindPlayer()
     {
-        killableObject.transform.LookAt(GameObject.Find("Tortoise").transform);
+        killableObject.transform.LookAt(GameObject.FindGameObjectWithTag("Player").transform);
     }
 
     public override void CreateProjectile()
