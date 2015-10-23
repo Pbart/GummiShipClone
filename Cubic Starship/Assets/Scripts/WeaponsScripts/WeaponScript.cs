@@ -6,24 +6,26 @@ public class WeaponScript : MonoBehaviour
     public float fireRate;
     public GameObject projectile;
 
+    private float hiddenFireRate;
     private int numberOfDirections;
     private Vector3 directionToFire;
 
 	// Use this for initialization
 	void Start ()
     {
-	
+        hiddenFireRate = fireRate;
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
-        FireWeapons();
+        //FireWeapons();
 	}
     public virtual void CreateProjectile()
     {
         GameObject projectileClone = (GameObject)Instantiate(projectile, transform.position + new Vector3(0, -0.5f, 0), transform.rotation);
-        projectileClone.transform.SetParent(this.transform.parent);
+        projectileClone.transform.SetParent(Camera.main.transform);
+        Debug.Log(projectileClone.name);
     }
 
     public virtual void FireWeapons()
@@ -31,8 +33,13 @@ public class WeaponScript : MonoBehaviour
         if (fireRate <= 0)
         {
             CreateProjectile();
-            fireRate = 2f;
+            fireRate = hiddenFireRate;
+            //Debug.Log("Shooting from the weapons class");
         }
         fireRate -= Time.deltaTime;
+    }
+    public virtual void TestingFiring()
+    {
+        Debug.Log("BANG!!!");
     }
 }

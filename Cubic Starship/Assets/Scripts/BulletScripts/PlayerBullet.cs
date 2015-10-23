@@ -30,7 +30,7 @@ public class PlayerBullet : MonoBehaviour
     /// </summary>
     void BulletMovement()
     {
-        viewportPos = Camera.main.WorldToViewportPoint(playerBullet.transform.position);
+        viewportPos = Camera.main.WorldToViewportPoint(this.transform.position);
         viewportPos += directionVector;
         this.transform.position = Camera.main.ViewportToWorldPoint(viewportPos);
     }

@@ -75,6 +75,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\BulletScripts\EnemyProjectiles.cs" />
+    <Compile Include="Assets\Scripts\BulletScripts\GravityRounds.cs" />
     <Compile Include="Assets\Scripts\BulletScripts\PlayerBullet.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyFireScript.cs" />
     <Compile Include="Assets\Scripts\GlobalScripts\Garage.cs" />
@@ -84,6 +85,8 @@
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerControls.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\ShipControls.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\TestingCameraSpaces.cs" />
+    <Compile Include="Assets\Scripts\WeaponsScripts\FireTypeWeapon.cs" />
+    <Compile Include="Assets\Scripts\WeaponsScripts\GravityTypeWeapon.cs" />
     <Compile Include="Assets\Scripts\WeaponsScripts\ShipComponent.cs" />
     <Compile Include="Assets\Scripts\WeaponsScripts\WeaponScript.cs" />
     <Compile Include="Assets\U-Wing\Scripts\Demo\SpaceSkyboxes\DemoSceneScript.cs" />

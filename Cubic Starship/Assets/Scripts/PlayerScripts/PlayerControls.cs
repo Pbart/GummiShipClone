@@ -3,9 +3,9 @@ using System.Collections;
 
 public class PlayerControls : KillableObject
 {
-    public float shipMovementSpeed = 0.1f;
-    //public WeaponScript[] weapons;
+    public float shipMovementSpeed = 0.07f;
 
+    private WeaponScript[] weapons;
     private Vector3 viewportPos;
     //private Animator anim;
 
@@ -14,6 +14,14 @@ public class PlayerControls : KillableObject
     {
         killableObject = this.gameObject;
         mainCamera = Camera.main;
+        weapons = this.GetComponentsInChildren<WeaponScript>();
+        for (int i = 0; i < weapons.Length; i++)
+        {
+            Debug.Log(weapons[i].gameObject.name);
+            Debug.Log(weapons[i].GetComponentInChildren<WeaponScript>());
+        }
+
+        Debug.Log(weapons.Length);
         //anim = gameObject.GetComponent<Animator>();
     }
 
@@ -70,12 +78,10 @@ public class PlayerControls : KillableObject
     {
         if (Input.GetAxis("FireProjectile") == 1)
         {
-            if (fireRate <= 0)
+            for (int w = 0; w < weapons.Length; w++)
             {
-                CreateProjectile();
-                fireRate = 0.05f;
+                weapons[w].FireWeapons();
             }
-            fireRate -= Time.deltaTime;
         }
     }
 
