@@ -15,13 +15,13 @@ public class PlayerControls : KillableObject
         killableObject = this.gameObject;
         mainCamera = Camera.main;
         weapons = this.GetComponentsInChildren<WeaponScript>();
-        for (int i = 0; i < weapons.Length; i++)
-        {
-            Debug.Log(weapons[i].gameObject.name);
-            Debug.Log(weapons[i].GetComponentInChildren<WeaponScript>());
-        }
+        //for (int i = 0; i < weapons.Length; i++)
+        //{
+        //    Debug.Log(weapons[i].gameObject.name);
+        //    Debug.Log(weapons[i].GetComponentInChildren<WeaponScript>());
+        //}
 
-        Debug.Log(weapons.Length);
+        //Debug.Log(weapons.Length);
         //anim = gameObject.GetComponent<Animator>();
     }
 
@@ -31,6 +31,7 @@ public class PlayerControls : KillableObject
         GetAxisInput();
         KeepPlayerInBounds();
         FireWeapons();
+        
         //DoDefensiveAction();
     }
     /// <summary>

@@ -25,7 +25,7 @@ public class WeaponScript : MonoBehaviour
     {
         GameObject projectileClone = (GameObject)Instantiate(projectile, transform.position + new Vector3(0, -0.5f, 0), transform.rotation);
         projectileClone.transform.SetParent(Camera.main.transform);
-        Debug.Log(projectileClone.name);
+       // Debug.Log(projectileClone.name);
     }
 
     public virtual void FireWeapons()

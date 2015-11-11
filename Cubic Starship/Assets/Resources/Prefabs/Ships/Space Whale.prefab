@@ -445,7 +445,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.75589561, y: -7.81136942, z: -11.9664087}
+  m_LocalPosition: {x: 4.75589561, y: -4.80000019, z: 56.7000008}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400004}
@@ -948,7 +948,16 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 400010, guid: 54403f43a5edaee498c92c272f96d07b, type: 2}
+    - target: {fileID: 0}
+      propertyPath: enemySpawner
+      value: 
+      objectReference: {fileID: 11409464, guid: e54f3f9804b22fc45aa5acaf34cd0b30,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100028}

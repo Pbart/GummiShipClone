@@ -14,7 +14,7 @@ public class Garage : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
-        spawnPoint = transform.position + new Vector3(0,0,4);
+        spawnPoint = transform.position + new Vector3(0,0,10);
         currentShip = 0;
         InitialSpawn();
 	}
@@ -26,7 +26,7 @@ public class Garage : MonoBehaviour
 	}
     void InitialSpawn()
     {
-        shipList = Resources.LoadAll<GameObject>("Prefabs/Ships");
+        shipList = Resources.LoadAll<GameObject>("Prefabs/Ships/Temp");
         Ship = shipList[currentShip];
         temp = (GameObject)Instantiate(Ship,spawnPoint,Quaternion.identity);
     }
