@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+//Testing
 public enum SplineFollowMode
 {
     Once,

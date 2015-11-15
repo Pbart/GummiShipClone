@@ -6,6 +6,7 @@ public class Garage : MonoBehaviour
     public GameObject[] shipList;
     public GameObject targets;
     public Vector3 spawnPoint;
+    public BezierSplineFollower bsf;
 
     private int currentShip;
     private GameObject Ship;
@@ -14,6 +15,8 @@ public class Garage : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
+        bsf = GameObject.Find("RotationObject").GetComponent<BezierSplineFollower>();
+        bsf.enabled = false;
         spawnPoint = transform.position + new Vector3(0,0,10);
         currentShip = 0;
         InitialSpawn();
@@ -54,6 +57,7 @@ public class Garage : MonoBehaviour
         {
             temp.transform.parent = Camera.main.transform;
             temp.AddComponent<PlayerControls>();
+            //bsf.enabled = true;
             PlayerControls pc = temp.GetComponent<PlayerControls>();
             pc.projectile = (GameObject)Resources.Load("Prefabs/Projectiles/Player Bullet");
             temp.tag = "Player";
