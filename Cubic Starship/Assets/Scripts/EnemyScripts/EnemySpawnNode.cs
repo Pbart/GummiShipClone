@@ -7,8 +7,9 @@ public enum SpawnTiming
 	AtEndOfNodeReference
 };
 
+//Spawn node is used by the EnemySpawningTree. It encompasses the timing of when spawners activate and how they chain together.
 [System.Serializable]
-public class SpawnNode
+public class EnemySpawnNode
 {
 	public GameObject spawn;		//The enemy to spawn
 	public GameObject spawnPath;    //The path each enemy will follow when spawned.
