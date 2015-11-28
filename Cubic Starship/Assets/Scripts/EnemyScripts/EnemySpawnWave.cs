@@ -5,6 +5,8 @@ using System.Collections;
 //The information for each Spawner is kept in a seperate class called SpawnNode.
 public class EnemySpawnWave : MonoBehaviour {
 
+	public EnemySpawnNode[] spawners;
+
 	// Use this for initialization
 	void Start () {
 	
