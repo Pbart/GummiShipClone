@@ -1,18 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-enum SpawnerState
-{
-	SpawnerIdle,
-	SpawnerSpawning,
-	SpawnerFinished
-}
 
-//EnemySpawner_Eric is for spawning enemies and making them follow a path (bezier spline). The amount of enemies and time in between
+
+//SaberToothSpawner is for spawning enemies and making them follow a path (bezier spline). The amount of enemies and time in between
 // each enemy is controlled in the inspector.
-public class EnemySpawner_Eric : MonoBehaviour
+public class SaberToothSpawner : ISpawner
 {
-	public GameObject spawn;				//The enemy to spawn
+	public GameObject saberToothPrefab;				//The enemy to spawn
 	public BezierSplineFollower spawnPathScript;  //The path each enemy will follow when spawned. They are spawned at the beginning of the path.
 											// 10-21-15 - Eric - For right now, they will only follow a BezierSpline script. If there is no 
 											// BezierSpline script, the enemy will spawn at the parent's transform's origin only and sit there.
@@ -23,7 +18,7 @@ public class EnemySpawner_Eric : MonoBehaviour
 
 	public bool forceSpawn;			//temprorary for testing/debugging
 
-	private SpawnerState m_State;
+
 	private float m_fTimeElapsed;	//time elapsed since last spawn
 	private uint m_iAmountspawned;	//enemies spawned since state changed to SpawnerSpawning
 
@@ -39,7 +34,7 @@ public class EnemySpawner_Eric : MonoBehaviour
 		m_iAmountspawned = 0;
 		m_fTimeElapsed = 0.0f;
 	}
-
+	
 	// Update is called once per frame
 	void Update()
 	{
@@ -86,7 +81,7 @@ public class EnemySpawner_Eric : MonoBehaviour
 		}
 	}
 
-	public void TriggerSpawn()
+	public override void TriggerSpawn()
 	{
 		m_State = SpawnerState.SpawnerSpawning;
 	}
@@ -97,7 +92,7 @@ public class EnemySpawner_Eric : MonoBehaviour
 
 		if(spawnPathScript)
 		{
-			enemy = (GameObject)Instantiate(spawn, spawnPathScript.transform.position, Quaternion.identity);
+			enemy = (GameObject)Instantiate(saberToothPrefab, spawnPathScript.b_spline.transform.position, Quaternion.identity);
 
 //			enemy.transform.position = spawnPath.transform.position;
 
@@ -115,7 +110,7 @@ public class EnemySpawner_Eric : MonoBehaviour
 		}
 		else
 		{
-			enemy = (GameObject)Instantiate(spawn, new Vector3(0, 0, 0), Quaternion.identity);
+			enemy = (GameObject)Instantiate(saberToothPrefab, new Vector3(0, 0, 0), Quaternion.identity);
 		}
 
 		if (spawnParent)
