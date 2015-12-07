@@ -3,12 +3,12 @@ using System.Collections;
 
 
 
-//SaberToothSpawner is for spawning enemies and making them follow a path (bezier spline). The amount of enemies and time in between
+//SaberToothSpawner is for spawning sabertooths and making them follow a path (bezier spline). The amount of enemies and time in between
 // each enemy is controlled in the inspector.
 public class SaberToothSpawner : ISpawner
 {
-	public GameObject saberToothPrefab;				//The enemy to spawn
-	public BezierSplineFollower spawnPathScript;  //The path each enemy will follow when spawned. They are spawned at the beginning of the path.
+	public GameObject saberToothPrefab;				//The saber tooth prefab to spawn
+	public BezierSplineFollower spawnPathScript;  	//The path each enemy will follow when spawned. They are spawned at the beginning of the path.
 											// 10-21-15 - Eric - For right now, they will only follow a BezierSpline script. If there is no 
 											// BezierSpline script, the enemy will spawn at the parent's transform's origin only and sit there.
 
@@ -81,10 +81,6 @@ public class SaberToothSpawner : ISpawner
 		}
 	}
 
-	public override void TriggerSpawn()
-	{
-		m_State = SpawnerState.SpawnerSpawning;
-	}
 
 	private void SpawnEnemy()
 	{
@@ -119,4 +115,17 @@ public class SaberToothSpawner : ISpawner
 		m_iAmountspawned++;
 		m_fTimeElapsed = 0.0f;
 	}
+
+
+	public override void TriggerSpawn()
+	{
+		m_State = SpawnerState.SpawnerSpawning;
+	}
+
+	public override float TotalTimeForSpawner ()
+	{
+		return spawnRate * (float)(spawnAmount - 1);
+	}
+
+
 }

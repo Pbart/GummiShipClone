@@ -53,12 +53,12 @@
      <Compile Include="Assets\Scripts\BulletScripts\GravityRounds.cs" />
      <Compile Include="Assets\Scripts\BulletScripts\PlayerBullet.cs" />
      <Compile Include="Assets\Scripts\EnemyScripts\EnemyFireScript.cs" />
-     <Compile Include="Assets\Scripts\EnemyScripts\EnemySpawnNode.cs" />
-     <Compile Include="Assets\Scripts\EnemyScripts\EnemySpawnWave.cs" />
      <Compile Include="Assets\Scripts\EnemyScripts\EnemySpawner.cs" />
-     <Compile Include="Assets\Scripts\EnemyScripts\ISpawner.cs" />
-     <Compile Include="Assets\Scripts\EnemyScripts\SaberToothSpawner.cs" />
-     <Compile Include="Assets\Scripts\EnemyScripts\TriggetEnemyWaveScript.cs" />
+     <Compile Include="Assets\Scripts\EnemyScripts\Spawning Scripts\EnemySpawnNode.cs" />
+     <Compile Include="Assets\Scripts\EnemyScripts\Spawning Scripts\EnemySpawnWave.cs" />
+     <Compile Include="Assets\Scripts\EnemyScripts\Spawning Scripts\ISpawner.cs" />
+     <Compile Include="Assets\Scripts\EnemyScripts\Spawning Scripts\SaberToothSpawner.cs" />
+     <Compile Include="Assets\Scripts\EnemyScripts\Spawning Scripts\TriggetEnemyWaveScript.cs" />
      <Compile Include="Assets\Scripts\EnemyScripts\suicideShip.cs" />
      <Compile Include="Assets\Scripts\GlobalScripts\Garage.cs" />
      <Compile Include="Assets\Scripts\GlobalScripts\KillableObject.cs" />
