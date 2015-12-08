@@ -72,6 +72,11 @@ public class BezierSpline : MonoBehaviour
     [SerializeField]
     private BezierControlPointMode[] modes;
 
+
+	//TODO: - Eric - Create operator overload and copy constructor
+
+
+
     public void Reset()
     {
         points = new Vector3[] {
