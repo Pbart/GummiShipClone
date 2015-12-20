@@ -47,18 +47,22 @@ public class EnemySpawnWave : MonoBehaviour {
 
 				if(m_SpawnerIndex < spawnersInOrder.Length)
 				{
+					//see if there are any spawners that need to be activated
 					while(cont)
 					{
+						//no more spanwers to activate
 						if(m_SpawnerIndex >= spawnersInOrder.Length)
 						{
 							cont = false;
 							break;
 						}
+						// there is a spawner to activate, activate and continue
 						else if(m_TimeElapsed >= spawnersInOrder[m_SpawnerIndex].timeStart)
 						{
 							spawnersInOrder[m_SpawnerIndex].spawner.TriggerSpawn();
 							m_SpawnerIndex++;
 						}
+						//no spawners to activate currently
 						else
 						{
 							cont = false;
@@ -67,7 +71,8 @@ public class EnemySpawnWave : MonoBehaviour {
 						
 					}
 				}
-
+				
+				//reset the state if wave is finished
 				if(m_TimeElapsed > m_TimeEnd)
 				{
 					m_State = WaveState.WaveFinished;
@@ -111,7 +116,7 @@ public class EnemySpawnWave : MonoBehaviour {
 		n1.timeStart = 0;
 		n1.timeEnd = n1.timeStart + n1.spawner.TotalTimeForSpawner();
 
-		//set timing for all other nodes past 1st
+		//set timing for all other nodes past 1st node
 		for (int i = 1; i < spawnersInOrder.Length; i++) 
 		{
 			EnemySpawnNode nPrev = spawnersInOrder[i-1];

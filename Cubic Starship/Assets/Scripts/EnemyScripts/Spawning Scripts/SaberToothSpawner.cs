@@ -34,8 +34,7 @@ public class SaberToothSpawner : ISpawner
 		m_iAmountspawned = 0;
 		m_fTimeElapsed = 0.0f;
 	}
-	
-	// Update is called once per frame
+
 	void Update()
 	{
 		switch (m_State)

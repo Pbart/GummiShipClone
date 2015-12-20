@@ -13,13 +13,13 @@ public enum TimeReference
 [System.Serializable]
 public class EnemySpawnNode
 {
-	public ISpawner spawner;							//The spawner to activate
+	public ISpawner spawner;								//The spawner to activate
 	public float waitTimeFromPreviousSpawn;					//Time to wait for next spawn node to activate (seconds)
-	public TimeReference timeReferenceFromPreviousSpawn;     //Either wait for timeTillNextEnemySpawn from the start or end
+	public TimeReference timeReferenceFromPreviousSpawn;    //Specifies start waiting for waitTimeFromPreviousSpawn from the start or end of previous spawner
 
 	[HideInInspector]
 	public float timeStart;		//time to trigger the spawner
 	
 	[HideInInspector]
-	public float timeEnd;		//time the spawner ends (used to find at what time the wave ends)
+	public float timeEnd;		//time the spawner ends
 }
