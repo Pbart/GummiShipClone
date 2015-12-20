@@ -78,6 +78,7 @@
     <Compile Include="Assets\Scripts\Bezier Scripts\BezierSpline.cs" />
     <Compile Include="Assets\Scripts\Bezier Scripts\BezierSplineFollower.cs" />
     <Compile Include="Assets\Scripts\Bezier Scripts\Line.cs" />
+    <Compile Include="Assets\Scripts\BulletScripts\BlizzardBullets.cs" />
     <Compile Include="Assets\Scripts\BulletScripts\EnemyProjectiles.cs" />
     <Compile Include="Assets\Scripts\BulletScripts\GravityRounds.cs" />
     <Compile Include="Assets\Scripts\BulletScripts\PlayerBullet.cs" />
@@ -88,14 +89,13 @@
     <Compile Include="Assets\Scripts\GlobalScripts\KillableObject.cs" />
     <Compile Include="Assets\Scripts\GlobalScripts\RotateCameraScript.cs" />
     <Compile Include="Assets\Scripts\GlobalScripts\managerScript.cs" />
-    <Compile Include="Assets\Scripts\PlayerScripts\BulletTesting.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerControls.cs" />
-    <Compile Include="Assets\Scripts\PlayerScripts\ShipControls.cs" />
-    <Compile Include="Assets\Scripts\PlayerScripts\TestingCameraSpaces.cs" />
-    <Compile Include="Assets\Scripts\WeaponsScripts\FireTypeWeapon.cs" />
-    <Compile Include="Assets\Scripts\WeaponsScripts\GravityTypeWeapon.cs" />
+    <Compile Include="Assets\Scripts\PrototypeScripts\BulletTesting.cs" />
+    <Compile Include="Assets\Scripts\PrototypeScripts\ShipControls.cs" />
+    <Compile Include="Assets\Scripts\PrototypeScripts\TestingCameraSpaces.cs" />
+    <Compile Include="Assets\Scripts\WeaponsScripts\MultiDirectionalCannon.cs" />
     <Compile Include="Assets\Scripts\WeaponsScripts\ShipComponent.cs" />
-    <Compile Include="Assets\Scripts\WeaponsScripts\WeaponScript.cs" />
+    <Compile Include="Assets\Scripts\WeaponsScripts\SingleDirectionalCannon.cs" />
     <Compile Include="Assets\U-Wing\Scripts\Demo\SpaceSkyboxes\DemoSceneScript.cs" />
     <Compile Include="Assets\U-Wing\Scripts\Demo\SpaceSkyboxes\DemoScriptSceneLoader.cs" />
     <Compile Include="Assets\U-Wing\Scripts\Demo\SpaceSkyboxes\MouseLook.cs" />

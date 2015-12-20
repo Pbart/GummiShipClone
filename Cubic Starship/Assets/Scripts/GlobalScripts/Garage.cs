@@ -61,7 +61,7 @@ public class Garage : MonoBehaviour
             PlayerControls pc = temp.GetComponent<PlayerControls>();
             pc.projectile = (GameObject)Resources.Load("Prefabs/Projectiles/Player Bullet");
             temp.tag = "Player";
-            targets.SetActive(true);
+            //targets.SetActive(true);
             enabled = false;
         }
     }

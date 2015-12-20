@@ -5,7 +5,7 @@ AnimationClip:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: BarrelRoll
+  m_Name: BarrelRollLeft
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -79,46 +79,6 @@ AnimationClip:
         inSlope: {x: 0, y: 0, z: 0, w: 0}
         outSlope: {x: 0, y: 0, z: 0, w: 0}
         tangentMode: 0
-      - time: .216666669
-        value: {x: -0, y: -0, z: 3.2584137e-07, w: 1}
-        inSlope: {x: 0, y: 0, z: 0, w: 0}
-        outSlope: {x: 0, y: 0, z: 0, w: 0}
-        tangentMode: 0
-      - time: .233333334
-        value: {x: -0, y: -0, z: 3.2584137e-07, w: 1}
-        inSlope: {x: 0, y: 0, z: 0, w: 0}
-        outSlope: {x: 0, y: 0, z: 0, w: 0}
-        tangentMode: 0
-      - time: .25
-        value: {x: -0, y: -0, z: 3.2584137e-07, w: 1}
-        inSlope: {x: 0, y: 0, z: 0, w: 0}
-        outSlope: {x: 0, y: 0, z: 0, w: 0}
-        tangentMode: 0
-      - time: .266666681
-        value: {x: -0, y: -0, z: 3.2584137e-07, w: 1}
-        inSlope: {x: 0, y: 0, z: 0, w: 0}
-        outSlope: {x: 0, y: 0, z: 0, w: 0}
-        tangentMode: 0
-      - time: .283333361
-        value: {x: -0, y: -0, z: 3.2584137e-07, w: 1}
-        inSlope: {x: 0, y: 0, z: 0, w: 0}
-        outSlope: {x: 0, y: 0, z: 0, w: 0}
-        tangentMode: 0
-      - time: .300000042
-        value: {x: -0, y: -0, z: 3.2584137e-07, w: 1}
-        inSlope: {x: 0, y: 0, z: 0, w: 0}
-        outSlope: {x: 0, y: 0, z: 0, w: 0}
-        tangentMode: 0
-      - time: .316666722
-        value: {x: -0, y: -0, z: 3.2584137e-07, w: 1}
-        inSlope: {x: 0, y: 0, z: 0, w: 0}
-        outSlope: {x: 0, y: 0, z: 0, w: 0}
-        tangentMode: 0
-      - time: .333333343
-        value: {x: -0, y: -0, z: 3.2584137e-07, w: 1}
-        inSlope: {x: 0, y: 0, z: 0, w: 0}
-        outSlope: {x: 0, y: 0, z: 0, w: 0}
-        tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
     path: 
@@ -144,11 +104,11 @@ AnimationClip:
   m_AnimationClipSettings:
     serializedVersion: 2
     m_StartTime: 0
-    m_StopTime: .333333343
+    m_StopTime: .200000003
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
-    m_LoopTime: 1
+    m_LoopTime: 0
     m_LoopBlend: 0
     m_LoopBlendOrientation: 0
     m_LoopBlendPositionY: 0
@@ -227,46 +187,6 @@ AnimationClip:
         inSlope: 0
         outSlope: 0
         tangentMode: 0
-      - time: .216666669
-        value: -0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - time: .233333334
-        value: -0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - time: .25
-        value: -0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - time: .266666681
-        value: -0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - time: .283333361
-        value: -0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - time: .300000042
-        value: -0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - time: .316666722
-        value: -0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - time: .333333343
-        value: -0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
     attribute: m_LocalRotation.x
@@ -337,46 +257,6 @@ AnimationClip:
         outSlope: 0
         tangentMode: 0
       - time: .200000003
-        value: -0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - time: .216666669
-        value: -0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - time: .233333334
-        value: -0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - time: .25
-        value: -0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - time: .266666681
-        value: -0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - time: .283333361
-        value: -0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - time: .300000042
-        value: -0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - time: .316666722
-        value: -0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - time: .333333343
         value: -0
         inSlope: 0
         outSlope: 0
@@ -455,46 +335,6 @@ AnimationClip:
         inSlope: 0
         outSlope: 0
         tangentMode: 0
-      - time: .216666669
-        value: 3.2584137e-07
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - time: .233333334
-        value: 3.2584137e-07
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - time: .25
-        value: 3.2584137e-07
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - time: .266666681
-        value: 3.2584137e-07
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - time: .283333361
-        value: 3.2584137e-07
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - time: .300000042
-        value: 3.2584137e-07
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - time: .316666722
-        value: 3.2584137e-07
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - time: .333333343
-        value: 3.2584137e-07
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
     attribute: m_LocalRotation.z
@@ -569,46 +409,6 @@ AnimationClip:
         inSlope: 0
         outSlope: 0
         tangentMode: 0
-      - time: .216666669
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - time: .233333334
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - time: .25
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - time: .266666681
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - time: .283333361
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - time: .300000042
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - time: .316666722
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - time: .333333343
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
     attribute: m_LocalRotation.w
@@ -635,21 +435,6 @@ AnimationClip:
         outSlope: 0
         tangentMode: 10
       - time: .200000003
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      - time: .283333331
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      - time: .316666663
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      - time: .333333343
         value: 0
         inSlope: 0
         outSlope: 0
@@ -683,21 +468,6 @@ AnimationClip:
         inSlope: 0
         outSlope: 0
         tangentMode: 10
-      - time: .283333331
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      - time: .316666663
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      - time: .333333343
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
     attribute: localEulerAnglesBaked.y
@@ -723,21 +493,6 @@ AnimationClip:
         outSlope: 0
         tangentMode: 10
       - time: .200000003
-        value: 360
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      - time: .283333331
-        value: 360
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      - time: .316666663
-        value: 360
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      - time: .333333343
         value: 360
         inSlope: 0
         outSlope: 0

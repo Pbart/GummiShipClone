@@ -3,19 +3,16 @@ using System.Collections;
 
 public class PlayerBullet : MonoBehaviour
 {
-    private Vector3 viewportPos;
-    private Vector3 directionVector;
-
-    public float projectileSpeed;
     public float projectileLifetime;
 
+    private Vector3 viewportPos;
+    private Vector3 directionVector;
     private GameObject playerBullet;
 
     // Use this for initialization
     void Start()
     {
         playerBullet = this.gameObject;
-        directionVector = new Vector3(0, 0, projectileSpeed);
     }
 
     // Update is called once per frame
@@ -30,9 +27,11 @@ public class PlayerBullet : MonoBehaviour
     /// </summary>
     void BulletMovement()
     {
-        viewportPos = Camera.main.WorldToViewportPoint(this.transform.position);
-        viewportPos += directionVector;
-        this.transform.position = Camera.main.ViewportToWorldPoint(viewportPos);
+        //viewportPos = Camera.main.WorldToViewportPoint(this.transform.position);
+        //viewportPos += directionVector;
+        //this.transform.position = Camera.main.ViewportToWorldPoint(viewportPos);
+
+        this.transform.position += DirectionVector;
     }
 
     void DestroySelf()
@@ -40,5 +39,10 @@ public class PlayerBullet : MonoBehaviour
         Destroy(playerBullet, projectileLifetime);
     }
 
-
+    //Properties
+    public Vector3 DirectionVector
+    {
+        get { return directionVector; }
+        set { directionVector = value; }
+    }
 }
