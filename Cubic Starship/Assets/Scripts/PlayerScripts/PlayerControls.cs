@@ -3,26 +3,32 @@ using System.Collections;
 
 public class PlayerControls : KillableObject
 {
-    public float shipMovementSpeed = 0.07f;
+    #region Fields/Attribute
+    public float shipHorizontalMovementSpeed = 0.07f;
+    public float shipVerticalMovementSpeed = 0.05f;
 
-    private WeaponScript[] weapons;
+    private float shipMovementSpeedBoost = 1f;
+    private float horizontalValue;
+    private float verticalValue;
+
+    private SingleDirectionalCannon[] weapons;
     private Vector3 viewportPos;
-    //private Animator anim;
+    private Animator anim;
+    #endregion
 
+    #region Methods
     // Use this for initialization
     void Start()
     {
         killableObject = this.gameObject;
         mainCamera = Camera.main;
-        weapons = this.GetComponentsInChildren<WeaponScript>();
-        //for (int i = 0; i < weapons.Length; i++)
-        //{
-        //    Debug.Log(weapons[i].gameObject.name);
-        //    Debug.Log(weapons[i].GetComponentInChildren<WeaponScript>());
-        //}
+        weapons = this.GetComponentsInChildren<SingleDirectionalCannon>();
+        anim = gameObject.GetComponent<Animator>();
 
-        //Debug.Log(weapons.Length);
-        //anim = gameObject.GetComponent<Animator>();
+        for (int i = 0; i < weapons.Length; i++)
+        {
+            Debug.Log("Name of Weapon: " + weapons[i].gameObject.name + " Script Name: " + weapons[i].GetComponentInChildren<SingleDirectionalCannon>());
+        }
     }
 
     // Update is called once per frame
@@ -31,9 +37,11 @@ public class PlayerControls : KillableObject
         GetAxisInput();
         KeepPlayerInBounds();
         FireWeapons();
-        
-        //DoDefensiveAction();
+        DoDefensiveAction();
+
+        //Debug.Log(Input.GetAxis("ShipHorizontalMovement"));
     }
+ 
     /// <summary>
     /// Used to grab input values from the input manager
     /// </summary>
@@ -48,8 +56,9 @@ public class PlayerControls : KillableObject
     /// </summary>
     private void MoveVertical()
     {
+        verticalValue = Input.GetAxis("ShipVerticalMovement");
         Vector3 cameraUpVector = mainCamera.transform.up;
-        killableObject.transform.position += cameraUpVector * (Input.GetAxis("ShipVerticalMovement") * shipMovementSpeed);
+        killableObject.transform.position += cameraUpVector * (verticalValue * (shipVerticalMovementSpeed * shipMovementSpeedBoost));
     }
 
     /// <summary>
@@ -57,10 +66,20 @@ public class PlayerControls : KillableObject
     /// </summary>
     private void MoveHorizontal()
     {
+        horizontalValue = Input.GetAxis("ShipHorizontalMovement");
+        if (horizontalValue != 0)
+        {
+            anim.SetBool("IsStationaryHorizontal", false);
+        }
+        else
+        {
+            anim.SetBool("IsStationaryHorizontal", true);
+        }
+        anim.SetFloat("Direction", horizontalValue);
         Vector3 cameraRightVector = mainCamera.transform.right;
-        killableObject.transform.position += cameraRightVector * (Input.GetAxis("ShipHorizontalMovement") * shipMovementSpeed);
-        killableObject.transform.rotation = Quaternion.Euler(0, 0, -45f * Input.GetAxis("ShipHorizontalMovement") * Time.deltaTime);
+        killableObject.transform.position += cameraRightVector * (horizontalValue * (shipHorizontalMovementSpeed * shipMovementSpeedBoost));
     }
+
     /// <summary>
     /// Used to keep the player in the camera screen bounds
     /// </summary>
@@ -75,7 +94,7 @@ public class PlayerControls : KillableObject
     /// <summary>
     /// [TESTING METHOD]: This will be updated to call the weapon's fire method
     /// </summary>
-    public override void FireWeapons()
+    public void FireWeapons()
     {
         if (Input.GetAxis("FireProjectile") == 1)
         {
@@ -85,18 +104,22 @@ public class PlayerControls : KillableObject
             }
         }
     }
-
-    //private void DoDefensiveAction()
-    //{
-    //    if (Input.GetAxisRaw("DefensiveAction") != 0)
-    //    {
-    //        //Debug.Log(Input.GetAxisRaw("DefensiveAction"));
-    //        anim.SetBool("IsDefensiveButtonPressed", true);
-    //    }
-    //    else
-    //    {
-    //        anim.SetBool("IsDefensiveButtonPressed", false);
-    //    }
-    //}
-
+    
+    /// <summary>
+    /// [TESTING METHOD]: Used to have the ship perfrom thier defensive action like barrel rolling or put up a shield
+    /// This will be moved to the ship component that handles what defensive action the player equips to the ship
+    /// </summary>
+    private void DoDefensiveAction()
+    {
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            shipMovementSpeedBoost = 2.5f;
+            anim.SetTrigger("DefensiveButton");
+        }
+        else
+        {
+            shipMovementSpeedBoost = 1f;
+        }
+    }
+    #endregion
 }

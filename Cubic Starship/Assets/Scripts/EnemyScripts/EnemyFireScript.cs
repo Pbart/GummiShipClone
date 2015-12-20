@@ -25,7 +25,7 @@ public class EnemyFireScript : KillableObject
         {            
             if(projectile != null)
             {
-                FireWeapons();
+                //FireWeapons();
             }
         }
         FindPlayer();

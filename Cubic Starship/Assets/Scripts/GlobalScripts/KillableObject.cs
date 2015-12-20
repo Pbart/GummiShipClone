@@ -4,7 +4,7 @@ using System.Collections;
 public abstract class KillableObject : MonoBehaviour {
 
     public GameObject projectile;
-    public float fireRate;
+    //public float fireRate;
 
     [HideInInspector]
     public Camera mainCamera;
@@ -17,13 +17,13 @@ public abstract class KillableObject : MonoBehaviour {
         projectileClone.transform.SetParent(this.transform.parent);
     }
     
-    public virtual void FireWeapons()
-    {
-        if (fireRate <= 0)
-        {
-            CreateProjectile();
-            fireRate = 2f;
-        }
-        fireRate -= Time.deltaTime;
-    }
+    //public virtual void FireWeapons()
+    //{
+    //    if (fireRate <= 0)
+    //    {
+    //        CreateProjectile();
+    //        fireRate = 2f;
+    //    }
+    //    fireRate -= Time.deltaTime;
+    //}
 }
