@@ -969,7 +969,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   percentageComplete: 0
-  colliders: []
+  colliders:
+  - {fileID: 0}
   explosionParticle: {fileID: 100010, guid: 031d08f52af1daa4f929b85221519426, type: 2}
 --- !u!114 &11456400
 MonoBehaviour:
@@ -988,6 +989,7 @@ MonoBehaviour:
   killableObject: {fileID: 0}
   enemySpawner: {fileID: 11409464, guid: e54f3f9804b22fc45aa5acaf34cd0b30, type: 2}
   respawnRate: 5
+  spawn: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -995,6 +997,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: colliders.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: player
       value: 
